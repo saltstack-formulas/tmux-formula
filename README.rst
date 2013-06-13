@@ -1,0 +1,7 @@
+tmux
+====
+
+tmux
+----
+
+Install tmux

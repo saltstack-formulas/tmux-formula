@@ -1,8 +1,11 @@
+{% from "tmux/map.jinja" import tmux with context %}
+
 tmux:
   pkg.installed
 
-/usr/share/tmux/.tmux.conf:
+tmux_conf:
     file:
+        - name: {{ tmux.tmux_conf }}
         - managed
         - source: salt://tmux/.tmux.conf
         - require:

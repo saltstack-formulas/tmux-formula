@@ -1,0 +1,8 @@
+{% set tmux = salt['grains.filter_by']({
+    'Debian': {
+        'tmux_conf': '/etc/tmux.conf',
+    },
+    'default': {
+        'tmux_conf': '/usr/share/tmux/.tmux.conf',
+    },
+}, merge=salt['pillar.get']('tmux:lookup')) %}

@@ -5,7 +5,7 @@ tmux:
 
 tmux_conf:
   file.managed:
-    - name: {{ tmux.tmux_conf }}
-    - source: salt://tmux/.tmux.conf
+    - name: {{ salt['pillar.get']('tmux.config_path', tmux.tmux_conf) }}
+    - source: salt://tmux/files/.tmux.conf
     - require:
       - pkg: tmux

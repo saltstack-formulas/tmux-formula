@@ -1,2 +1,4 @@
 tmux:
-  - config_path: /path/to/arbitrary/tmux.conf
+  lookup:
+    tmux_conf: /tmp/tmux.conf
+  

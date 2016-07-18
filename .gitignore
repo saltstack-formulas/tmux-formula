@@ -1,0 +1,4 @@
+.kitchen/*
+Gemfile.lock
+*.log
+*.gz

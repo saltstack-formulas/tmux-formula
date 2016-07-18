@@ -1,0 +1,26 @@
+---
+driver:
+  name: vagrant
+  network:
+    - ["private_network", { ip: "192.168.55.55"}]
+
+provisioner:
+  name: salt_solo
+  formula: tmux
+  pillars-from-files:
+    tmux.sls: pillar.example
+  pillars:
+    top.sls:
+      base:
+        "*":
+          - tmux
+  state_top:
+    base:
+      "*":
+        - tmux
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default

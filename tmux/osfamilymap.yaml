@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+Debian:
+  config_file: /etc/tmux.conf
+
+Redhat:
+  config_file: /etc/tmux.conf
+
+Suse:
+  config_file: /etc/tmux.conf
+
+Arch:
+  config_file: /etc/tmux.conf

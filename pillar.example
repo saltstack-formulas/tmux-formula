@@ -1,4 +1,3 @@
 tmux:
-  lookup:
-    tmux_conf: /tmp/tmux.conf
-  
+  manage_config: true
+  config_file: /tmp/tmux.conf
